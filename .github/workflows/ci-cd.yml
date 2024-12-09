@@ -22,11 +22,9 @@ jobs:
           path: ./dist
 
 
- # Deploy Job
-  deploy:
-    # Add a dependency to the build job
+# Deployment Job
+  delivery:
     needs: build
-    # Specify runner + deployment step
     runs-on: ubuntu-latest
     steps:
       - name: Download artifact
